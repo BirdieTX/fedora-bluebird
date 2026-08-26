@@ -21,7 +21,6 @@ modules:
       - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
       nonfree: rpmfusion
     remove:
-      auto-remove: true
       packages:
       - firefox
       - firefox-langpacks
@@ -34,8 +33,10 @@ modules:
     - priority.sh  
   
   - type: dnf
+    intsall:
+      packages:
+      - terra-release-mesa
     install:
-      allow-erasing: true
       packages:
       - alacritty
       - bat
@@ -62,19 +63,18 @@ modules:
       - f36-backgrounds-gnome
       - f37-backgrounds-gnome
       - f38-backgrounds-gnome
-      - f38-backgrounds-gnome
       - f39-backgrounds-gnome
       - f40-backgrounds-gnome
       - f41-backgrounds-gnome
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
       - fastfetch
-      - ffmpeg
       - fish
       - gamescope
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-caffeine
       - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-gsconnect
       - gnome-shell-extension-just-perfection
       - google-android-emoji-fonts
       - google-arimo-fonts
@@ -88,8 +88,6 @@ modules:
       - google-roboto-mono-fonts
       - google-roboto-slab-fonts
       - google-rubik-fonts
-      - gstreamer1-plugins-bad-freeworld
-      - gstreamer1-plugins-ugly
       - HandBrake
       - htop
       - jetbrains-mono-fonts-all
@@ -117,6 +115,26 @@ modules:
       - zsh-autosuggestions
       - zsh-html
       - zsh-syntax-highlighting
+    install:
+      allow-erasing: true
+      packages:
+      - ffmpeg
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-ugly
+
+    install:
+      allow-erasing: false
+      packages:
+        - repo: copr:copr.fedorainfracloud.org:ublue-os:staging
+          packages:
+            - gnome-shell-extension-blur-my-shell
+
+    install:
+      allow-erasing: false
+      packages:
+        - repo: copr:copr.fedorainfracloud.org:ublue-os:packages
+          packages:
+            - gnome-rounded-blur
 
   - type: default-flatpaks
     configurations:
