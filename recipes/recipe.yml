@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: bluebird-gnome-unstable
+name: fedora-bluebird
 description: This image is a fork of Fedora Silverblue for personal use by Birdie.
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 44
