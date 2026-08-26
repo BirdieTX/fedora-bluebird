@@ -1,14 +1,10 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: fedora-bluebird
+name: bluebird-gnome-unstable
 description: This image is a fork of Fedora Silverblue for personal use by Birdie.
-
-# image-version can be set to latest or a specific release number
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 44
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: files
     files:
@@ -19,12 +15,108 @@ modules:
   - type: dnf
     repos:
       copr:
-    install:
-      packages:
+      - ublue-os/packages
+      - ublue-os/staging
+      files:
+      - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
+      nonfree: rpmfusion
     remove:
+      auto-remove: true
       packages:
-        - firefox
-        - firefox-langpacks
+      - firefox
+      - firefox-langpacks
+      - gnome-software-rpm-ostree
+      - gnome-system-monitor
+      - nano-default-editor
+
+  - type: script
+    scripts:
+    - priority.sh  
+  
+  - type: dnf
+    install:
+      allow-erasing: true
+      packages:
+      - alacritty
+      - bat
+      - bibata-cursor-theme
+      - btop
+      - cmatrix
+      - cargo
+      - eza
+      - f21-backgrounds-gnome
+      - f22-backgrounds-gnome
+      - f23-backgrounds-gnome
+      - f24-backgrounds-gnome
+      - f25-backgrounds-gnome
+      - f26-backgrounds-gnome
+      - f27-backgrounds-gnome
+      - f28-backgrounds-gnome
+      - f29-backgrounds-gnome
+      - f30-backgrounds-gnome
+      - f31-backgrounds-gnome
+      - f32-backgrounds-gnome
+      - f33-backgrounds-gnome
+      - f34-backgrounds-gnome
+      - f35-backgrounds-gnome
+      - f36-backgrounds-gnome
+      - f37-backgrounds-gnome
+      - f38-backgrounds-gnome
+      - f38-backgrounds-gnome
+      - f39-backgrounds-gnome
+      - f40-backgrounds-gnome
+      - f41-backgrounds-gnome
+      - f42-backgrounds-gnome
+      - f43-backgrounds-gnome
+      - fastfetch
+      - ffmpeg
+      - fish
+      - gamescope
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-caffeine
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-just-perfection
+      - google-android-emoji-fonts
+      - google-arimo-fonts
+      - google-droid-fonts-all
+      - google-go-fonts
+      - google-noto-fonts-all
+      - google-noto-sans-cjk-fonts
+      - google-noto-sans-hk-fonts
+      - google-noto-serif-cjk-fonts
+      - google-roboto-fonts
+      - google-roboto-mono-fonts
+      - google-roboto-slab-fonts
+      - google-rubik-fonts
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-ugly
+      - HandBrake
+      - htop
+      - jetbrains-mono-fonts-all
+      - jetbrainsmono-nerd-fonts
+      - kf6-kirigami-addons
+      - material-icons-fonts
+      - mc
+      - nano
+      - nerd-fonts
+      - papirus-icon-theme
+      - pipewire-codec-aptx
+      - plasma-breeze
+      - rsms-inter-fonts
+      - rsms-inter-vf-fonts
+      - rust
+      - setroubleshoot
+      - signal-cli
+      - starship
+      - terminus-fonts
+      - terminus-fonts-console
+      - vim-default-editor
+      - yazi
+      - zsh
+      - zsh-autocomplete
+      - zsh-autosuggestions
+      - zsh-html
+      - zsh-syntax-highlighting
 
   - type: default-flatpaks
     configurations:
