@@ -37,7 +37,7 @@ modules:
 
   - type: script
     scripts:
-    - priority.sh    
+    - priority.sh  
 
   - type: dnf
     install:
