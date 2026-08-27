@@ -99,7 +99,6 @@ modules:
       - mc
       - nerd-fonts
       - papirus-icon-theme
-      - pipewire-codec-aptx
       - plasma-breeze
       - rsms-inter-fonts
       - rsms-inter-vf-fonts
