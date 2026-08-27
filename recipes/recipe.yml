@@ -33,9 +33,45 @@ modules:
       packages:
       - terra-release-mesa
 
+  - type: dnf
+    replace:
+    - from repo: terra-mesa
+      packages:
+      - mesa-dri-drivers
+      - mesa-filesystem
+      - mesa-libEGL
+      - mesa-libGL
+      - mesa-libgbm
+      - mesa-vulkan-drivers
+
+  - type: dnf
+    replace:
+    - from repo: rpmfusion-free
+      packages:
+      - ffmpeg
+
+  - type: dnf
+    replace:
+    - from repo: rpmfusion-free
+      packages:
+      - old: libavcodec-free
+        new: libavcodec
+      - old: libavdevice-free
+        new: libavdecive
+      - old: libavfilter-free
+        new: libavfilter
+      - old: libavformat-free
+        new: libavformat
+      - old: libavutil-free
+        new: libavutil
+      - old: libswresample-free
+        new: libswresample
+      - old: libswscale-free
+        new: libswscale
+
   - type: script
     scripts:
-    - priority.sh  
+    - priority.sh
 
   - type: dnf
     install:
@@ -92,10 +128,13 @@ modules:
       - google-roboto-mono-fonts
       - google-roboto-slab-fonts
       - google-rubik-fonts
+      - gstreamer1-plugins-bad-freeworld
       - gstreamer1-plugins-ugly
+      - HandBrake
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
       - kf6-kirigami-addons
+      - libheif-freeworld
       - material-icons-fonts
       - mc
       - nerd-fonts
