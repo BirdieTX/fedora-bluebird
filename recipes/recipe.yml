@@ -159,6 +159,11 @@ modules:
         - org.libreoffice.LibreOffice
         - org.gnome.Weather
 
+  - type: dnf
+    remove:
+      packages:
+      - gnome-extensions-app
+
   - type: files
     files:
       - source: applications
@@ -167,6 +172,7 @@ modules:
 
   - type: script
     scripts:
+    - disable.sh
     - plymouth.sh
 
   - type: initramfs
