@@ -13,5 +13,4 @@ dnf5 config-manager setopt \
     rpmfusion-free-updates.priority=87 \
     rpmfusion-nonfree-updates.priority=86 \
     terra.priority=79 \
-    terra-extras.priority=78 \
-    terra-mesa.priority=77
+    terra-mesa.priority=78

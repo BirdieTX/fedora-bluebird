@@ -1,6 +1,8 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: fedora-bluebird
+alt-tags:
+- unstable
 description: This image is a fork of Fedora Silverblue for personal use by Birdie.
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 44
@@ -36,6 +38,8 @@ modules:
     intsall:
       packages:
       - terra-release-mesa
+    
+  - type: dnf
     install:
       packages:
       - alacritty
@@ -115,6 +119,9 @@ modules:
       - zsh-autosuggestions
       - zsh-html
       - zsh-syntax-highlighting
+    
+    
+  - type: dnf
     install:
       allow-erasing: true
       packages:
@@ -122,27 +129,52 @@ modules:
       - gstreamer1-plugins-bad-freeworld
       - gstreamer1-plugins-ugly
 
+
+  - type: dnf
     install:
       allow-erasing: false
       packages:
         - repo: copr:copr.fedorainfracloud.org:ublue-os:staging
           packages:
-            - gnome-shell-extension-blur-my-shell
+          - gnome-shell-extension-blur-my-shell
 
+  - type: dnf
     install:
       allow-erasing: false
       packages:
         - repo: copr:copr.fedorainfracloud.org:ublue-os:packages
           packages:
-            - gnome-rounded-blur
+          - gnome-rounded-blur
 
   - type: default-flatpaks
     configurations:
       - notify: false
         scope: system
         install:
-          - 
-          - 
-      - scope: user
+        - com.belmoussaoui.Decoder
+        - com.brave.Browser
+        - com.mattjakeman.ExtensionManager
+        - com.vixalien.sticky
+        - io.missioncenter.MissionCenter
+        - org.gnome.baobab
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.Chess
+        - org.gnome.clocks
+        - org.gnome.Decibels
+        - org.gnome.font-viewer
+        - org.gnome.Logs
+        - org.gnome.Loupe
+        - org.gnome.Mahjongg
+        - org.gnome.Mines
+        - org.gnome.Nibbles
+        - org.gnome.Papers
+        - org.gnome.Showtime
+        - org.gnome.SimpleScan
+        - org.gnome.Snapshot
+        - org.gnome.Sudoku
+        - org.libreoffice.LibreOffice
+        - org.gnome.Weather
 
   - type: signing
