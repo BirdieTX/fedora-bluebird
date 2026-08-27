@@ -159,4 +159,15 @@ modules:
         - org.libreoffice.LibreOffice
         - org.gnome.Weather
 
+  - type: files
+    files:
+      source: applications
+      # scary
+      destination: /
+
+  - type: script
+    scripts:
+    - plymouth.sh
+
+  - type: initramfs
   - type: signing
