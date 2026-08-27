@@ -72,7 +72,6 @@ modules:
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
       - fastfetch
-      - ffmpeg
       - fish
       - fzf
       - gamescope
@@ -92,9 +91,7 @@ modules:
       - google-roboto-mono-fonts
       - google-roboto-slab-fonts
       - google-rubik-fonts
-      - gstreamer1-plugins-bad-freeworld
       - gstreamer1-plugins-ugly
-      - HandBrake
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
       - kf6-kirigami-addons
