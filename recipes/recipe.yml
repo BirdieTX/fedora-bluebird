@@ -107,7 +107,6 @@ modules:
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
       - kf6-kirigami-addons
-      - libheif-freeworld
       - material-icons-fonts
       - mc
       - nerd-fonts
