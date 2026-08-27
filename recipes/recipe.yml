@@ -29,16 +29,16 @@ modules:
       - gnome-software-rpm-ostree
       - gnome-system-monitor
       - nano-default-editor
-
-  - type: script
-    scripts:
-    - priority.sh  
   
   - type: dnf
     install:
       packages:
       - terra-release-mesa
-    
+
+  - type: script
+    scripts:
+    - priority.sh    
+
   - type: dnf
     install:
       packages:
