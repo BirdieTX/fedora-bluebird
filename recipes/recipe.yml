@@ -102,12 +102,15 @@ modules:
       - gstreamer1-plugins-ugly
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
-      - kf6-kirigami-addons
+      - kf6-kirigami-addons\
+      - kvantum
       - material-icons-fonts
       - mc
       - nerd-fonts
       - papirus-icon-theme
       - plasma-breeze
+      - qt5ct
+      - qt6ct
       - rsms-inter-fonts
       - rsms-inter-vf-fonts
       - rust

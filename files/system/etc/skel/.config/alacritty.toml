@@ -14,7 +14,7 @@ family = "JetBrainsMonoNL Nerd Font"
 family = "JetBrainsMonoNL Nerd Font"
 
 [terminal]
-shell = "/bin/fish"
+shell = "/bin/zsh"
 
 [window]
 dimensions = { columns = 100, lines = 25 }

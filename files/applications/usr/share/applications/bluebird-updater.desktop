@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name='Force Update'
+Type=Application
+Icon=dnfdragora
+Terminal=true
+Exec=/usr/bin/bluebird-update.sh
