@@ -161,7 +161,7 @@ modules:
     install:
       - Alphabetical App Grid
       - Desktop Icons NG (DING)
-      - Keep pinned apps in AppGrid
+      - Keep Favorites/Pinned Apps in AppGrid
       - Logo Menu
       - Tiling Assistant
   
