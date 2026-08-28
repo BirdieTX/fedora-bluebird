@@ -79,7 +79,6 @@ modules:
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
       - fastfetch
-      - fzf
       - gamescope
       - gnome-rounded-blur
       - gnome-shell-extension-appindicator
@@ -102,7 +101,7 @@ modules:
       - gstreamer1-plugins-ugly
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
-      - kf6-kirigami-addons\
+      - kf6-kirigami-addons
       - kvantum
       - material-icons-fonts
       - mc
