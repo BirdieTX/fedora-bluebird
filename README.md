@@ -1,6 +1,6 @@
 # Fedora Bluebird &nbsp; [![bluebuild build badge](https://github.com/birdietx/fedora-bluebird/actions/workflows/build.yml/badge.svg)](https://github.com/birdietx/fedora-bluebird/actions/workflows/build.yml)
 
-You should probably not use this Fedora build if your a random person who stumbled in here. This is a custom Fedora Silverblue ISO build using [BlueBuild].(https://blue-build.org/how-to/setup/)
+You should probably not use this Fedora build if your a random person who stumbled in here. This is a custom Fedora Silverblue ISO build using [BlueBuild](https://blue-build.org/how-to/setup/).
 
 ## Installation
 
