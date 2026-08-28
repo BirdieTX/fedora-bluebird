@@ -52,7 +52,6 @@ modules:
     install:
       packages:
       - alacritty
-      - bat
       - bibata-cursor-theme
       - btop
       - cmatrix
@@ -82,7 +81,6 @@ modules:
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
       - fastfetch
-      - fish
       - fzf
       - gamescope
       - gnome-rounded-blur
@@ -159,6 +157,14 @@ modules:
         - org.libreoffice.LibreOffice
         - org.gnome.Weather
 
+  - type: gnome-extensions
+    install:
+      - Alphabetical App Grid
+      - Desktop Icons NG (DING)
+      - Keep pinned apps in AppGrid
+      - Logo Menu
+      - Tiling Assistant
+  
   - type: dnf
     remove:
       packages:
@@ -172,8 +178,7 @@ modules:
 
   - type: script
     scripts:
-    - disable.sh
-    - plymouth.sh
+    - post.sh
 
   - type: initramfs
   - type: signing
