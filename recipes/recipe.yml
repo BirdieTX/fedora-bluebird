@@ -56,23 +56,14 @@ modules:
     install:
       packages:
       - alacritty
-      - bibata-cursor-theme
       - btop
       - cmatrix
       - cargo
       - eza
       - fastfetch
-      - gnome-rounded-blur
-      - gnome-shell-extension-appindicator
-      - gnome-shell-extension-blur-my-shell
-      - gnome-shell-extension-caffeine
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-gsconnect
-      - gnome-shell-extension-just-perfection
       - gstreamer1-plugins-ugly
       - kf6-kirigami-addons
       - kvantum
-      - material-icons-fonts
       - mc
       - qt5ct
       - qt6ct
@@ -122,7 +113,25 @@ modules:
       - f41-backgrounds-gnome
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
-      - fastfetch
+      - bibata-cursor-theme
+      - papirus-icon-theme
+      - plasma-breeze
+
+  - type: dnf
+    install:
+      packages:
+      - arimo-nerd-fonts
+      - jetbrains-mono-fonts-all
+      - jetbrainsmono-nerd-fonts
+      - material-icons-fonts
+      - rsms-inter-fonts
+      - rsms-inter-vf-fonts
+      - terminus-fonts
+      - terminus-fonts-console
+
+  - type: dnf
+    install:
+      packages:
       - gnome-rounded-blur
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-blur-my-shell
@@ -130,32 +139,7 @@ modules:
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-just-perfection
-      - google-android-emoji-fonts
-      - google-arimo-fonts
-      - google-droid-fonts-all
-      - google-go-fonts
-      - google-noto-fonts-all
-      - google-noto-sans-hk-fonts
-      - google-noto-serif-cjk-fonts
-      - google-roboto-fonts
-      - google-roboto-mono-fonts
-      - google-roboto-slab-fonts
-      - google-rubik-fonts
 
-  - type: dnf
-    install:
-      packages:
-      - jetbrains-mono-fonts-all
-      - jetbrainsmono-nerd-fonts
-      - kf6-kirigami-addons
-      - kvantum
-      - material-icons-fonts
-      - mc
-      - nerd-fonts
-      - rsms-inter-fonts
-      - rsms-inter-vf-fonts
-      - terminus-fonts
-      - terminus-fonts-console
 
   - type: default-flatpaks
     configurations:
@@ -196,11 +180,6 @@ modules:
       - Keep Favorites/Pinned Apps in AppGrid
       - Logo Menu
       - Tiling Assistant
-  
-  - type: dnf
-    remove:
-      packages:
-      - gnome-extensions-app
 
   - type: files
     files:
