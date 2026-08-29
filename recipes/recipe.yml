@@ -79,7 +79,6 @@ modules:
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
       - fastfetch
-      - gamescope
       - gnome-rounded-blur
       - gnome-shell-extension-appindicator
       - gnome-shell-extension-blur-my-shell
@@ -133,6 +132,7 @@ modules:
         install:
         - com.belmoussaoui.Decoder
         - com.brave.Browser
+        - com.github.tchx84.Flatseal
         - com.mattjakeman.ExtensionManager
         - com.vixalien.sticky
         - io.missioncenter.MissionCenter
