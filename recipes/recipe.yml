@@ -116,15 +116,12 @@ modules:
       - f41-backgrounds-gnome
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
-      - fastfetch
-      - gnome-rounded-blur
-      - gnome-shell-extension-appindicator
-      - gnome-shell-extension-blur-my-shell
-      - gnome-shell-extension-caffeine
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-gsconnect
-      - gnome-shell-extension-just-perfection
-      - google-android-emoji-fonts
+      - papirus-icon-theme
+      - plasma-breeze
+      
+  - type: dnf
+    install:
+      packages:
       - google-arimo-fonts
       - google-droid-fonts-all
       - google-go-fonts
@@ -141,10 +138,7 @@ modules:
       packages:
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
-      - kf6-kirigami-addons
-      - kvantum
       - material-icons-fonts
-      - mc
       - nerd-fonts
       - rsms-inter-fonts
       - rsms-inter-vf-fonts
