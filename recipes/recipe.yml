@@ -66,7 +66,6 @@ modules:
       - gstreamer1-plugins-ugly
       - kf6-kirigami-addons
       - kvantum
-      - material-icons-fonts
       - mc
       - qt5ct
       - qt6ct
@@ -139,11 +138,15 @@ modules:
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
       - material-icons-fonts
-      - nerd-fonts
       - rsms-inter-fonts
       - rsms-inter-vf-fonts
       - terminus-fonts
       - terminus-fonts-console
+
+  - type: dnf
+    install:
+      packages:
+      - nerd-fonts
 
   - type: default-flatpaks
     configurations:
