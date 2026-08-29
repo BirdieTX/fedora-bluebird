@@ -23,12 +23,6 @@ modules:
       packages:
       - firefox
       - firefox-langpacks
-      - gnome-shell-extension-apps-menu
-      - gnome-shell-extension-background-logo
-      - gnome-shell-extension-common
-      - gnome-shell-extension-launch-new-instance
-      - gnome-shell-extension-places-menu
-      - gnome-shell-extension-window-list
       - gnome-system-monitor
       - nano-default-editor
   
@@ -201,6 +195,11 @@ modules:
     remove:
       packages:
       - gnome-extensions-app
+      - gnome-shell-extension-apps-menu
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-window-list
 
   - type: files
     files:
