@@ -23,12 +23,6 @@ modules:
       packages:
       - firefox
       - firefox-langpacks
-      - gnome-shell-extension-apps-menu
-      - gnome-shell-extension-background-logo
-      - gnome-shell-extension-common
-      - gnome-shell-extension-launch-new-instance
-      - gnome-shell-extension-places-menu
-      - gnome-shell-extension-window-list
       - gnome-system-monitor
       - nano-default-editor
   
@@ -72,7 +66,6 @@ modules:
       - gstreamer1-plugins-ugly
       - kf6-kirigami-addons
       - kvantum
-      - material-icons-fonts
       - mc
       - qt5ct
       - qt6ct
@@ -122,15 +115,12 @@ modules:
       - f41-backgrounds-gnome
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
-      - fastfetch
-      - gnome-rounded-blur
-      - gnome-shell-extension-appindicator
-      - gnome-shell-extension-blur-my-shell
-      - gnome-shell-extension-caffeine
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-gsconnect
-      - gnome-shell-extension-just-perfection
-      - google-android-emoji-fonts
+      - papirus-icon-theme
+      - plasma-breeze
+      
+  - type: dnf
+    install:
+      packages:
       - google-arimo-fonts
       - google-droid-fonts-all
       - google-go-fonts
@@ -147,15 +137,16 @@ modules:
       packages:
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
-      - kf6-kirigami-addons
-      - kvantum
       - material-icons-fonts
-      - mc
-      - nerd-fonts
       - rsms-inter-fonts
       - rsms-inter-vf-fonts
       - terminus-fonts
       - terminus-fonts-console
+
+  - type: dnf
+    install:
+      packages:
+      - nerd-fonts
 
   - type: default-flatpaks
     configurations:
@@ -201,6 +192,12 @@ modules:
     remove:
       packages:
       - gnome-extensions-app
+      - gnome-shell-extension-apps-menu
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-common
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-window-list
 
   - type: files
     files:
