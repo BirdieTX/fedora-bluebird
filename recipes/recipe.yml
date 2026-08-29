@@ -55,6 +55,36 @@ modules:
       - cmatrix
       - cargo
       - eza
+      - fastfetch
+      - gnome-rounded-blur
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-blur-my-shell
+      - gnome-shell-extension-caffeine
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-gsconnect
+      - gnome-shell-extension-just-perfection
+      - gstreamer1-plugins-ugly
+      - kf6-kirigami-addons
+      - kvantum
+      - material-icons-fonts
+      - mc
+      - qt5ct
+      - qt6ct
+      - rust
+      - setroubleshoot
+      - signal-cli
+      - starship
+      - vim-default-editor
+      - yazi
+      - zsh
+      - zsh-autocomplete
+      - zsh-autosuggestions
+      - zsh-html
+      - zsh-syntax-highlighting
+
+  - type: dnf
+    install:
+      packages:
       - f21-backgrounds-gnome
       - f22-backgrounds-gnome
       - f23-backgrounds-gnome
@@ -65,6 +95,10 @@ modules:
       - f28-backgrounds-gnome
       - f29-backgrounds-gnome
       - f30-backgrounds-gnome
+
+  - type: dnf
+    install:
+      packages:
       - f31-backgrounds-gnome
       - f32-backgrounds-gnome
       - f33-backgrounds-gnome
@@ -75,9 +109,14 @@ modules:
       - f38-backgrounds-gnome
       - f39-backgrounds-gnome
       - f40-backgrounds-gnome
+
+  - type: dnf
+    install:
+      packages:
       - f41-backgrounds-gnome
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
+<<<<<<< Updated upstream
       - fastfetch
       - fzf
       - gamescope
@@ -88,6 +127,14 @@ modules:
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-just-perfection
+=======
+      - papirus-icon-theme
+      - plasma-breeze
+
+  - type: dnf
+    install:
+      packages:
+>>>>>>> Stashed changes
       - google-android-emoji-fonts
       - google-arimo-fonts
       - google-droid-fonts-all
@@ -99,33 +146,24 @@ modules:
       - google-roboto-mono-fonts
       - google-roboto-slab-fonts
       - google-rubik-fonts
-      - gstreamer1-plugins-ugly
+
+  - type: dnf
+    install:
+      packages:
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
+<<<<<<< Updated upstream
       - kf6-kirigami-addons\
       - kvantum
       - material-icons-fonts
       - mc
+=======
+>>>>>>> Stashed changes
       - nerd-fonts
-      - papirus-icon-theme
-      - plasma-breeze
-      - qt5ct
-      - qt6ct
       - rsms-inter-fonts
       - rsms-inter-vf-fonts
-      - rust
-      - setroubleshoot
-      - signal-cli
-      - starship
       - terminus-fonts
       - terminus-fonts-console
-      - vim-default-editor
-      - yazi
-      - zsh
-      - zsh-autocomplete
-      - zsh-autosuggestions
-      - zsh-html
-      - zsh-syntax-highlighting
 
   - type: default-flatpaks
     configurations:
