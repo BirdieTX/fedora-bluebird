@@ -107,6 +107,7 @@ modules:
       - f41-backgrounds-gnome
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
+      - bibata-cursor-theme
       - papirus-icon-theme
       - plasma-breeze
       
@@ -135,6 +136,17 @@ modules:
       - rsms-inter-vf-fonts
       - terminus-fonts
       - terminus-fonts-console
+
+  - type: dnf
+    install:
+      packages:
+      - gnome-rounded-blur
+      - gnome-shell-extension-appindicator
+      - gnome-shell-extension-blur-my-shell
+      - gnome-shell-extension-caffeine
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-gsconnect
+      - gnome-shell-extension-just-perfection
 
   - type: default-flatpaks
     configurations:
