@@ -33,6 +33,41 @@ modules:
 
   - type: dnf
     replace:
+    - from-repo: rpmfusion-free-updates
+      allow-erasing: true
+      packages:
+      - old: libavcodec
+        new: ffmpeg-libs
+      - old: libavdevice
+        new: ffmpeg-libs
+      - old: libavfilter
+        new: ffmpeg-libs
+      - old: libavformat
+        new: ffmpeg-libs
+      - old: libavutil
+        new: ffmpeg-libs
+      - old: libswresample
+        new: ffmpeg-libs
+      - old: libswscale
+        new: ffmpeg-libs
+      - ffmpeg-libs
+      - libfreeaptx
+      - x264-libs
+      - x265-libs
+    - from-repo: updates
+      allow-erasing: true
+      packages:
+      - libva
+      - intel-gmmlib
+    - from-repo: fedora
+      allow-erasing: true
+      packages:
+      - old: libfdk-aac
+        new: fdk-aac-free
+    - from-repo: terra
+      allow-erasing: true
+      packages:
+        - kvazaar-libs
     - from-repo: terra-mesa
       packages:
       - mesa-dri-drivers
@@ -51,12 +86,11 @@ modules:
       packages:
       - alacritty
       - btop
+      - btrfs-assistant
       - cmatrix
       - cargo
       - eza
       - fastfetch
-      - gstreamer1-plugins-ugly
-      - kf6-kirigami-addons
       - kvantum
       - mc
       - qt5ct
@@ -72,6 +106,18 @@ modules:
       - zsh-autosuggestions
       - zsh-html
       - zsh-syntax-highlighting
+
+  - type: dnf
+    install:
+      packages:
+      - ffmpeg
+      - gstreamer1-plugins-bad-freeworld
+      - gstreamer1-plugins-ugly
+      - HandBrake
+      - kf6-kirigami-addons
+      - libheif-freeworld
+      - libxavs
+      - pipewire-codec-aptx
 
   - type: dnf
     install:
