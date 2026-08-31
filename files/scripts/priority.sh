@@ -8,4 +8,5 @@ dnf5 config-manager setopt \
     updates.priority=98 \
     fedora-cisco-openh264.priority=97 \
     terra.priority=89 \
-    terra-mesa.priority=88
+    negativo17-fedora-multimedia.priority=88 \
+    terra-mesa.priority=87
