@@ -18,7 +18,6 @@ modules:
       - ublue-os/packages
       files:
       - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
-      nonfree: rpmfusion
     remove:
       packages:
       - firefox
@@ -30,17 +29,6 @@ modules:
     install:
       packages:
       - terra-release-mesa
-
-  - type: dnf
-    replace:
-    - from-repo: terra-mesa
-      packages:
-      - mesa-dri-drivers
-      - mesa-filesystem
-      - mesa-libEGL
-      - mesa-libGL
-      - mesa-libgbm
-      - mesa-vulkan-drivers
 
   - type: script
     scripts:
@@ -55,7 +43,7 @@ modules:
       - cargo
       - eza
       - fastfetch
-      - gstreamer1-plugins-ugly
+      - HandBrake-cli
       - kf6-kirigami-addons
       - kvantum
       - mc
@@ -72,6 +60,17 @@ modules:
       - zsh-autosuggestions
       - zsh-html
       - zsh-syntax-highlighting
+
+  - type: dnf
+    replace:
+    - from-repo: terra-mesa
+      packages:
+      - mesa-dri-drivers
+      - mesa-filesystem
+      - mesa-libEGL
+      - mesa-libGL
+      - mesa-libgbm
+      - mesa-vulkan-drivers
 
   - type: dnf
     install:
