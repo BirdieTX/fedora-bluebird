@@ -62,7 +62,7 @@ modules:
       - zsh-syntax-highlighting
 
   - type: dnf
-    install:
+    replace:
     - from-repo: terra-mesa
       packages:
       - mesa-dri-drivers
