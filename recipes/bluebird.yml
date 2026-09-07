@@ -35,17 +35,25 @@ modules:
     - priority.sh
 
   - type: dnf
+    replace:
+    - from-repo: terra-mesa
+      packages:
+      - mesa-dri-drivers
+      - mesa-filesystem
+      - mesa-libEGL
+      - mesa-libGL
+      - mesa-libgbm
+      - mesa-vulkan-drivers
+
+  - type: dnf
     install:
       packages:
       - alacritty
       - btop
-      - cmatrix
       - cargo
+      - cmatrix
       - eza
       - fastfetch
-      - HandBrake-cli
-      - kf6-kirigami-addons
-      - kvantum
       - mc
       - qt5ct
       - qt6ct
@@ -62,19 +70,9 @@ modules:
       - zsh-syntax-highlighting
 
   - type: dnf
-    replace:
-    - from-repo: terra-mesa
-      packages:
-      - mesa-dri-drivers
-      - mesa-filesystem
-      - mesa-libEGL
-      - mesa-libGL
-      - mesa-libgbm
-      - mesa-vulkan-drivers
-
-  - type: dnf
     install:
       packages:
+      - bibata-cursor-theme
       - f21-backgrounds-gnome
       - f22-backgrounds-gnome
       - f23-backgrounds-gnome
@@ -85,10 +83,6 @@ modules:
       - f28-backgrounds-gnome
       - f29-backgrounds-gnome
       - f30-backgrounds-gnome
-
-  - type: dnf
-    install:
-      packages:
       - f31-backgrounds-gnome
       - f32-backgrounds-gnome
       - f33-backgrounds-gnome
@@ -99,20 +93,16 @@ modules:
       - f38-backgrounds-gnome
       - f39-backgrounds-gnome
       - f40-backgrounds-gnome
-
-  - type: dnf
-    install:
-      packages:
       - f41-backgrounds-gnome
       - f42-backgrounds-gnome
       - f43-backgrounds-gnome
-      - bibata-cursor-theme
       - papirus-icon-theme
       - plasma-breeze
 
   - type: dnf
     install:
       packages:
+      - arimo-nerd-fonts
       - google-arimo-fonts
       - google-droid-fonts-all
       - google-go-fonts
@@ -123,11 +113,6 @@ modules:
       - google-roboto-mono-fonts
       - google-roboto-slab-fonts
       - google-rubik-fonts
-
-  - type: dnf
-    install:
-      packages:
-      - arimo-nerd-fonts
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
       - material-icons-fonts
@@ -138,6 +123,7 @@ modules:
 
   - type: dnf
     remove:
+      auto-remove: true
       packages:
       - gnome-shell-extension-apps-menu
       - gnome-shell-extension-background-logo
@@ -156,6 +142,12 @@ modules:
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-just-perfection
+      - HandBrake-cli
+      - kf6-kirigami-addons
+      - kolourpaint
+      - kvantum
+      - vlc
+      - vlc-plugins-all
 
   - type: default-flatpaks
     configurations:
@@ -187,12 +179,15 @@ modules:
         - org.gnome.Snapshot
         - org.gnome.Sudoku
         - org.gnome.TextEditor
+        - org.kde.elisa
+        - org.kde.kpat
         - org.kde.KStyle.Adwaita
         - org.kde.Platform
         - org.freedesktop.Platform.codecs-extra
         - org.kde.Platform.Locale
         - org.kde.WaylandDecoration.QAdwaitaDecorations
         - org.libreoffice.LibreOffice
+        - org.pulseaudio.pavucontrol
         - org.gnome.Weather
 
   - type: gnome-extensions
