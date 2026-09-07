@@ -1,14 +1,14 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: fedora-bluebird
-description: This image is a fork of Fedora Silverblue for personal use by Birdie.
+description: Custom Fedora Silverblue image with pre installed codecs and customs scripts.
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 44
 
 modules:
   - type: files
     files:
-      - source: system
+      - source: bluebird
         # scary
         destination: /
 
@@ -24,7 +24,7 @@ modules:
       - firefox-langpacks
       - gnome-system-monitor
       - nano-default-editor
-  
+
   - type: dnf
     install:
       packages:
@@ -109,7 +109,7 @@ modules:
       - bibata-cursor-theme
       - papirus-icon-theme
       - plasma-breeze
-      
+
   - type: dnf
     install:
       packages:
@@ -135,7 +135,7 @@ modules:
       - rsms-inter-vf-fonts
       - terminus-fonts
       - terminus-fonts-console
-      
+
   - type: dnf
     remove:
       packages:
@@ -187,6 +187,11 @@ modules:
         - org.gnome.Snapshot
         - org.gnome.Sudoku
         - org.gnome.TextEditor
+        - org.kde.KStyle.Adwaita
+        - org.kde.Platform
+        - org.freedesktop.Platform.codecs-extra
+        - org.kde.Platform.Locale
+        - org.kde.WaylandDecoration.QAdwaitaDecorations
         - org.libreoffice.LibreOffice
         - org.gnome.Weather
 
@@ -199,7 +204,7 @@ modules:
 
   - type: files
     files:
-      - source: applications
+      - source: bluebird-post
         # scary
         destination: /
 
