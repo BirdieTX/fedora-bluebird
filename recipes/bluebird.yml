@@ -155,7 +155,6 @@ modules:
         - com.brave.Browser
         - com.github.tchx84.Flatseal
         - com.mattjakeman.ExtensionManager
-        - com.saivert.pwvucontrol
         - com.vixalien.sticky
         - io.missioncenter.MissionCenter
         - org.gnome.baobab
@@ -201,4 +200,3 @@ modules:
 
   - type: initramfs
   - type: signing
-
