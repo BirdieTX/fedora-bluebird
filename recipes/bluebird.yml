@@ -1,4 +1,3 @@
----
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: fedora-bluebird
 description: Custom Fedora Silverblue image with pre installed codecs and customs scripts.
@@ -146,8 +145,6 @@ modules:
       - kf6-kirigami-addons
       - kolourpaint
       - kvantum
-      - vlc
-      - vlc-plugins-all
 
   - type: default-flatpaks
     configurations:
@@ -158,6 +155,7 @@ modules:
         - com.brave.Browser
         - com.github.tchx84.Flatseal
         - com.mattjakeman.ExtensionManager
+        - com.saivert.pwvucontrol
         - com.vixalien.sticky
         - io.missioncenter.MissionCenter
         - org.gnome.baobab
@@ -179,11 +177,10 @@ modules:
         - org.gnome.Snapshot
         - org.gnome.Sudoku
         - org.gnome.TextEditor
+        - org.gnome.Weather
         - org.kde.elisa
         - org.kde.kpat
         - org.libreoffice.LibreOffice
-        - org.pulseaudio.pavucontrol
-        - org.gnome.Weather
 
   - type: gnome-extensions
     install:
@@ -204,3 +201,4 @@ modules:
 
   - type: initramfs
   - type: signing
+
