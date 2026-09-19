@@ -157,6 +157,8 @@ modules:
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-just-perfection
+      - gpu-screen-recorder
+      - gpu-screen-recorder-ui
       - HandBrake-cli
       - obs-studio
       - vlc
@@ -178,7 +180,6 @@ modules:
         - com.brave.Browser
         - com.belmoussaoui.Decoder
         - com.belmoussaoui.Obfuscate
-        - com.dec05eba.gpu_screen_recorder
         - com.discordapp.Discord
         - com.github.Matoking.protontricks
         - com.github.tchx84.Flatseal
