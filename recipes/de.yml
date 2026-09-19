@@ -59,6 +59,7 @@ modules:
       - noctalia
       - qt5ct
       - qt6ct
+      - rofi
       - rust
       - setroubleshoot
       - signal-cli
