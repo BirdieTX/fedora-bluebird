@@ -64,6 +64,7 @@ modules:
       - signal-cli
       - starship
       - vim-default-editor
+      - wlr-randr
       - yazi
       - zsh
       - zsh-autocomplete
