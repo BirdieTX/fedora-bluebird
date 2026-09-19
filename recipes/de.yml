@@ -65,6 +65,7 @@ modules:
       - starship
       - vim-default-editor
       - wlr-randr
+      - xdg-desktop-portal-wlr
       - yazi
       - zsh
       - zsh-autocomplete
