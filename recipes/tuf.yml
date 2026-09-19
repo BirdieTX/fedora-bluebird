@@ -1,14 +1,13 @@
----
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: fedora-bluebird
-description: This image is a fork of Fedora Silverblue for personal use by Birdie.
+name: bluebird-tuf
+description: Custom Fedora Silverblue image with pre installed codecs and customs scripts.
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: 44
 
 modules:
   - type: files
     files:
-      - source: system
+      - source: bluebird
         # scary
         destination: /
 
@@ -23,8 +22,9 @@ modules:
       - firefox
       - firefox-langpacks
       - gnome-system-monitor
+      - malcontent-ui-libs
       - nano-default-editor
-  
+
   - type: dnf
     install:
       packages:
@@ -33,33 +33,6 @@ modules:
   - type: script
     scripts:
     - priority.sh
-
-  - type: dnf
-    install:
-      packages:
-      - alacritty
-      - btop
-      - cmatrix
-      - cargo
-      - eza
-      - fastfetch
-      - HandBrake-cli
-      - kf6-kirigami-addons
-      - kvantum
-      - mc
-      - qt5ct
-      - qt6ct
-      - rust
-      - setroubleshoot
-      - signal-cli
-      - starship
-      - vim-default-editor
-      - yazi
-      - zsh
-      - zsh-autocomplete
-      - zsh-autosuggestions
-      - zsh-html
-      - zsh-syntax-highlighting
 
   - type: dnf
     replace:
@@ -75,6 +48,33 @@ modules:
   - type: dnf
     install:
       packages:
+      - alacritty
+      - btop
+      - cargo
+      - cmatrix
+      - eza
+      - fastfetch
+      - kvantum
+      - mangowm
+      - noctalia
+      - qt5ct
+      - qt6ct
+      - rust
+      - setroubleshoot
+      - signal-cli
+      - starship
+      - vim-default-editor
+      - yazi
+      - zsh
+      - zsh-autocomplete
+      - zsh-autosuggestions
+      - zsh-html
+      - zsh-syntax-highlighting
+
+  - type: dnf
+    install:
+      packages:
+      - bibata-cursor-theme
       - f21-backgrounds-gnome
       - f22-backgrounds-gnome
       - f23-backgrounds-gnome
@@ -85,10 +85,6 @@ modules:
       - f28-backgrounds-gnome
       - f29-backgrounds-gnome
       - f30-backgrounds-gnome
-
-  - type: dnf
-    install:
-      packages:
       - f31-backgrounds-gnome
       - f32-backgrounds-gnome
       - f33-backgrounds-gnome
@@ -99,20 +95,16 @@ modules:
       - f38-backgrounds-gnome
       - f39-backgrounds-gnome
       - f40-backgrounds-gnome
+      - f41-backgrounds-gnome
+      - f42-backgrounds-gnome
+      - f43-backgrounds-gnome
+      - papirus-icon-theme
+      - plasma-breeze
 
   - type: dnf
     install:
       packages:
-      - f41-backgrounds-gnome
-      - f42-backgrounds-gnome
-      - f43-backgrounds-gnome
-      - bibata-cursor-theme
-      - papirus-icon-theme
-      - plasma-breeze
-      
-  - type: dnf
-    install:
-      packages:
+      - arimo-nerd-fonts
       - google-arimo-fonts
       - google-droid-fonts-all
       - google-go-fonts
@@ -123,11 +115,6 @@ modules:
       - google-roboto-mono-fonts
       - google-roboto-slab-fonts
       - google-rubik-fonts
-
-  - type: dnf
-    install:
-      packages:
-      - arimo-nerd-fonts
       - jetbrains-mono-fonts-all
       - jetbrainsmono-nerd-fonts
       - material-icons-fonts
@@ -135,9 +122,22 @@ modules:
       - rsms-inter-vf-fonts
       - terminus-fonts
       - terminus-fonts-console
-      
+
+  - type: dnf
+    install:
+      packages:
+      - kf6-kirigami-addons
+      - kid3
+      - kolourpaint
+      - krename
+      - krita
+      - okteta
+      - qbittorrent
+      - virt-manager
+
   - type: dnf
     remove:
+      auto-remove: true
       packages:
       - gnome-shell-extension-apps-menu
       - gnome-shell-extension-background-logo
@@ -156,18 +156,63 @@ modules:
       - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-gsconnect
       - gnome-shell-extension-just-perfection
+      - HandBrake-cli
+      - obs-studio
+      - vlc
+      - vlc-plugins-all
+
+  - type: dnf
+    install:
+      packages:
+      - steam
+      - gamescope
 
   - type: default-flatpaks
     configurations:
       - notify: false
         scope: system
         install:
-        - com.belmoussaoui.Decoder
+        - ca.desrt.dconf-editor
+        - com.adamcake.Bolt
         - com.brave.Browser
+        - com.belmoussaoui.Decoder
+        - com.belmoussaoui.Obfuscate
+        - com.dec05eba.gpu_screen_recorder
+        - com.discordapp.Discord
+        - com.github.Matoking.protontricks
         - com.github.tchx84.Flatseal
+        - com.markopejic.downloader
         - com.mattjakeman.ExtensionManager
+        - com.pokemmo.PokeMMO
+        - com.protonvpn.www
+        - com.rafaelmardojai.Blanket
+        - com.saivert.pwvucontrol
+        - com.usebottles.bottles
         - com.vixalien.sticky
+        - com.vysp3r.ProtonPlus
+        - dev.bragefuglseth.Keypunch
+        - dev.zed.Zed
+        - fr.handbrake.ghb
+        - io.edcd.EDMarketConnector
+        - io.gitlab.adhami3310.Converter
+        - io.github.antimicrox.antimicrox
+        - io.github.diegoivan.pdf_metadata_editor
+        - io.github.fizzyizzy05.binary
+        - io.github.idevecore.Valuta
+        - io.github.plrigaux.sysd-manager
+        - io.github.Soundux
+        - io.github.wartybix.Constrict
         - io.missioncenter.MissionCenter
+        - md.obsidian.Obsidian
+        - me.proton.Mail
+        - me.proton.Pass
+        - net.lutris.Lutris
+        - net.runelite.RuneLite
+        - org.audacityteam.Audacity
+        - org.blender.Blender
+        - org.desktop_plus.desktop-plus
+        - org.freedesktop.Bustle
+        - org.gimp.GIMP
         - org.gnome.baobab
         - org.gnome.Calculator
         - org.gnome.Calendar
@@ -175,20 +220,34 @@ modules:
         - org.gnome.Chess
         - org.gnome.clocks
         - org.gnome.Decibels
+        - org.gnome.dspy
         - org.gnome.font-viewer
+        - org.gnome.gitlab.YaLTeR.VideoTrimmer
         - org.gnome.Logs
         - org.gnome.Loupe
         - org.gnome.Mahjongg
         - org.gnome.Mines
         - org.gnome.Nibbles
         - org.gnome.Papers
+        - org.gnome.Polari
         - org.gnome.Showtime
         - org.gnome.SimpleScan
         - org.gnome.Snapshot
         - org.gnome.Sudoku
         - org.gnome.TextEditor
-        - org.libreoffice.LibreOffice
         - org.gnome.Weather
+        - org.inkscape.Inkscape
+        - org.kde.elisa
+        - org.kde.kdenlive
+        - org.kde.kpat
+        - org.libreoffice.LibreOffice
+        - org.localsend.localsend_app
+        - org.openttd.OpenTTD
+        - org.remmina.Remmina
+        - org.signal.Signal
+        - page.tesk.Refine
+        - ro.go.hmlendea.DL-Desktop
+        - sh.ppy.osu
 
   - type: gnome-extensions
     install:
@@ -199,7 +258,7 @@ modules:
 
   - type: files
     files:
-      - source: applications
+      - source: bluebird-post
         # scary
         destination: /
 
