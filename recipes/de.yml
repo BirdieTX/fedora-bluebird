@@ -129,6 +129,7 @@ modules:
       - kf6-kirigami-addons
       - kid3
       - kolourpaint
+      - kpat
       - krename
       - krita
       - okteta
@@ -242,7 +243,6 @@ modules:
         - org.inkscape.Inkscape
         - org.kde.elisa
         - org.kde.kdenlive
-        - org.kde.kpat
         - org.libreoffice.LibreOffice
         - org.localsend.localsend_app
         - org.openttd.OpenTTD

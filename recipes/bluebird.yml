@@ -144,6 +144,7 @@ modules:
       - HandBrake-cli
       - kf6-kirigami-addons
       - kolourpaint
+      - kpat
       - kvantum
 
   - type: default-flatpaks
@@ -179,7 +180,6 @@ modules:
         - org.gnome.TextEditor
         - org.gnome.Weather
         - org.kde.elisa
-        - org.kde.kpat
         - org.libreoffice.LibreOffice
 
   - type: gnome-extensions
