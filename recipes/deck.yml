@@ -19,6 +19,7 @@ modules:
   - type: script
     scripts:
     - priority.sh
+    - deck-enable.sh
 
   - type: dnf
     install:
