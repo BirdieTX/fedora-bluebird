@@ -49,6 +49,7 @@ edge-tiling=false
 switch-monitor=['XF86Display']
 
 [org/gnome/shell]
+always-show-log-out=true
 enabled-extensions=['AlphabeticalAppGrid@stuarthayhurst', 'appindicatorsupport@rgcjonas.gmail.com', 'blur-my-shell@aunetx', 'caffeine@patapon.info', 'dash-to-dock@micxgx.gmail.com', 'gsconnect@andyholmes.github.io', 'just-perfection-desktop@just-perfection', 'pinned-apps-in-appgrid@brunosilva.io', 'logomenu@aryan_k', 'tiling-assistant@leleat-on-github', 'ding@rastersoft.com']
 disable-extension-version-validation=true
 
