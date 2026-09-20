@@ -54,14 +54,17 @@ modules:
       - cmatrix
       - eza
       - fastfetch
+      - grim
       - kvantum
       - mangowm
       - noctalia
       - qt5ct
       - qt6ct
       - rust
+      - satty
       - setroubleshoot
       - signal-cli
+      - slurp
       - starship
       - vim-default-editor
       - wlr-randr
