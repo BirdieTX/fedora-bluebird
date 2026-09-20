@@ -29,6 +29,7 @@ jobs:
           # !! Add your recipes here
           - bluebird.yml
           - de.yml
+          - deck.yml
           - tuf.yml
     steps:
       # the build is fully handled by the reusable github action

@@ -1,0 +1,179 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: bluebird-deck
+description: Custom Fedora Silverblue image with pre installed codecs and customs scripts.
+base-image: ghcr.io/ublue-os/bazzite-deck-gnome
+image-version: 44
+
+modules:
+  - type: files
+    files:
+      - source: bluebird
+        # scary
+        destination: /
+
+  - type: dnf
+    remove:
+      packages:
+      - nano-default-editor
+
+  - type: script
+    scripts:
+    - priority.sh
+
+  - type: dnf
+    replace:
+    - from-repo: terra-mesa
+      packages:
+      - mesa-dri-drivers
+      - mesa-filesystem
+      - mesa-libEGL
+      - mesa-libGL
+      - mesa-libgbm
+      - mesa-vulkan-drivers
+
+  - type: dnf
+    install:
+      packages:
+      - alacritty
+      - btop
+      - cargo
+      - cmatrix
+      - eza
+      - fastfetch
+      - mc
+      - qt5ct
+      - qt6ct
+      - rust
+      - setroubleshoot
+      - signal-cli
+      - starship
+      - vim-default-editor
+      - yazi
+      - zsh
+      - zsh-autocomplete
+      - zsh-autosuggestions
+      - zsh-html
+      - zsh-syntax-highlighting
+
+  - type: dnf
+    install:
+      packages:
+      - bibata-cursor-theme
+      - f21-backgrounds-gnome
+      - f22-backgrounds-gnome
+      - f23-backgrounds-gnome
+      - f24-backgrounds-gnome
+      - f25-backgrounds-gnome
+      - f26-backgrounds-gnome
+      - f27-backgrounds-gnome
+      - f28-backgrounds-gnome
+      - f29-backgrounds-gnome
+      - f30-backgrounds-gnome
+      - f31-backgrounds-gnome
+      - f32-backgrounds-gnome
+      - f33-backgrounds-gnome
+      - f34-backgrounds-gnome
+      - f35-backgrounds-gnome
+      - f36-backgrounds-gnome
+      - f37-backgrounds-gnome
+      - f38-backgrounds-gnome
+      - f39-backgrounds-gnome
+      - f40-backgrounds-gnome
+      - f41-backgrounds-gnome
+      - f42-backgrounds-gnome
+      - f43-backgrounds-gnome
+      - papirus-icon-theme
+      - plasma-breeze
+
+  - type: dnf
+    install:
+      packages:
+      - arimo-nerd-fonts
+      - google-arimo-fonts
+      - google-droid-fonts-all
+      - google-go-fonts
+      - google-noto-fonts-all
+      - google-noto-sans-hk-fonts
+      - google-noto-serif-cjk-fonts
+      - google-roboto-fonts
+      - google-roboto-mono-fonts
+      - google-roboto-slab-fonts
+      - google-rubik-fonts
+      - jetbrains-mono-fonts-all
+      - jetbrainsmono-nerd-fonts
+      - material-icons-fonts
+      - rsms-inter-fonts
+      - rsms-inter-vf-fonts
+      - terminus-fonts
+      - terminus-fonts-console
+
+  - type: dnf
+    remove:
+      auto-remove: true
+      packages:
+      - gnome-shell-extension-apps-menu
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-common
+      - gnome-shell-extension-launch-new-instance
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-window-list
+
+  - type: dnf
+    install:
+      packages:
+      - gnome-rounded-blur
+      - HandBrake-cli
+      - kf6-kirigami-addons
+      - kolourpaint
+      - kpat
+      - kvantum
+
+  - type: default-flatpaks
+    configurations:
+      - notify: false
+        scope: system
+        install:
+        - com.belmoussaoui.Decoder
+        - com.brave.Browser
+        - com.github.tchx84.Flatseal
+        - com.mattjakeman.ExtensionManager
+        - com.saivert.pwvucontrol
+        - com.vixalien.sticky
+        - io.missioncenter.MissionCenter
+        - org.gnome.baobab
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.Chess
+        - org.gnome.clocks
+        - org.gnome.Decibels
+        - org.gnome.font-viewer
+        - org.gnome.Logs
+        - org.gnome.Loupe
+        - org.gnome.Mahjongg
+        - org.gnome.Mines
+        - org.gnome.Nibbles
+        - org.gnome.Showtime
+        - org.gnome.Snapshot
+        - org.gnome.Sudoku
+        - org.gnome.TextEditor
+        - org.gnome.Weather
+
+  - type: gnome-extensions
+    install:
+      - Alphabetical App Grid
+      - Keep Favorites/Pinned Apps in AppGrid
+      - Tiling Assistant
+
+  - type: files
+    files:
+      - source: bluebird-post
+        # scary
+        destination: /
+
+  - type: script
+    scripts:
+    - post.sh
+
+  - type: initramfs
+  - type: signing
