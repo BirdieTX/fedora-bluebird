@@ -21,17 +21,6 @@ modules:
     - priority.sh
 
   - type: dnf
-    replace:
-    - from-repo: terra-mesa
-      packages:
-      - mesa-dri-drivers
-      - mesa-filesystem
-      - mesa-libEGL
-      - mesa-libGL
-      - mesa-libgbm
-      - mesa-vulkan-drivers
-
-  - type: dnf
     install:
       packages:
       - alacritty
