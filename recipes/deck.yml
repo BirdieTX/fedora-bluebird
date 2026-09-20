@@ -2,7 +2,7 @@
 name: bluebird-deck
 description: Custom Fedora Silverblue image with pre installed codecs and customs scripts.
 base-image: ghcr.io/ublue-os/bazzite-deck-gnome
-image-version: 44
+image-version: stable-44
 
 modules:
   - type: files
