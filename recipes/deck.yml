@@ -14,6 +14,8 @@ modules:
   - type: dnf
     remove:
       packages:
+      - bazaar
+      - btrfs-assistant
       - nano-default-editor
 
   - type: script
@@ -28,6 +30,7 @@ modules:
       - cargo
       - cmatrix
       - eza
+      - gnome-software
       - mc
       - qt5ct
       - qt6ct
@@ -145,6 +148,11 @@ modules:
       - Alphabetical App Grid
       - Keep Favorites/Pinned Apps in AppGrid
       - Tiling Assistant
+    uninstall:
+      - Burn My Windows
+      - Compiz alike magic lamp effect
+      - Compiz windows effect
+      - Desktop Cube
 
   - type: files
     files:
