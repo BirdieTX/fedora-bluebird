@@ -25,11 +25,9 @@ modules:
     install:
       packages:
       - alacritty
-      - btop
       - cargo
       - cmatrix
       - eza
-      - fastfetch
       - mc
       - qt5ct
       - qt6ct
@@ -101,19 +99,12 @@ modules:
     remove:
       auto-remove: true
       packages:
-      - gnome-shell-extension-apps-menu
-      - gnome-shell-extension-background-logo
       - gnome-shell-extension-common
-      - gnome-shell-extension-launch-new-instance
-      - gnome-shell-extension-places-menu
-      - gnome-shell-extension-window-list
 
   - type: dnf
     install:
       packages:
-      - gnome-rounded-blur
       - HandBrake-cli
-      - kf6-kirigami-addons
       - kolourpaint
       - kpat
       - kvantum
