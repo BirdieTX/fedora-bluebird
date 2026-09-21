@@ -152,6 +152,12 @@ modules:
         # scary
         destination: /
 
+  - type: files
+    files:
+      - source: deck
+        # scary
+        destination: /
+
   - type: script
     scripts:
     - post.sh
