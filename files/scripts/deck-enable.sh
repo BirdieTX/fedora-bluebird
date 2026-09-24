@@ -12,3 +12,6 @@ dnf5 config-manager setopt \
     terra-mesa.enabled=1 \
     updates.enabled=1 \
     updates-archive.enabled=1
+
+rm -rf /etc/profile.d/bazzite-neofetch.sh
+rm -rf /usr/share/fish/vendor_conf.d/bazzite-neofetch.fish
