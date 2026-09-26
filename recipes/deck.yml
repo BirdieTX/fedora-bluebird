@@ -30,6 +30,8 @@ modules:
       - cargo
       - cmatrix
       - eza
+      - gnome-shell-extension-dash-to-dock
+      - gnome-shell-extension-just-perfection
       - gnome-software
       - mc
       - qt5ct
@@ -149,10 +151,12 @@ modules:
       - Keep Favorites/Pinned Apps in AppGrid
       - Tiling Assistant
     uninstall:
+      - Bazaar Companion
       - Burn My Windows
       - Compiz alike magic lamp effect
       - Compiz windows effect
       - Desktop Cube
+      - Hot Edge
 
   - type: files
     files:
