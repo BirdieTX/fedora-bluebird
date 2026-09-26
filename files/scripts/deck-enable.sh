@@ -15,3 +15,4 @@ dnf5 config-manager setopt \
 
 rm -rf /etc/profile.d/bazzite-neofetch.sh
 rm -rf /usr/share/fish/vendor_conf.d/bazzite-neofetch.fish
+rm -rf /usr/share/gnome-shell/extensions/bazaar-integration@kolunmi.github.io

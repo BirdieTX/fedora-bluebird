@@ -151,7 +151,6 @@ modules:
       - Keep Favorites/Pinned Apps in AppGrid
       - Tiling Assistant
     uninstall:
-      - Bazaar Companion
       - Burn My Windows
       - Compiz alike magic lamp effect
       - Compiz windows effect
