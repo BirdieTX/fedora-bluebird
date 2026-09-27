@@ -255,7 +255,7 @@ modules:
   - type: gnome-extensions
     install:
       - Alphabetical App Grid
-      - Keep Favorites/Pinned Apps in AppGrid
+      - Keep pinned apps in AppGrid
       - Logo Menu
       - Tiling Assistant
 

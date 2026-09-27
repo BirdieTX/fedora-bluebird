@@ -30,7 +30,6 @@ modules:
       - cargo
       - cmatrix
       - eza
-      - gnome-shell-extension-dash-to-dock
       - gnome-shell-extension-just-perfection
       - gnome-software
       - mc
@@ -148,7 +147,8 @@ modules:
   - type: gnome-extensions
     install:
       - Alphabetical App Grid
-      - Keep Favorites/Pinned Apps in AppGrid
+      - Dash to Dock
+      - Keep pinned apps in AppGrid
       - Tiling Assistant
     uninstall:
       - Burn My Windows
