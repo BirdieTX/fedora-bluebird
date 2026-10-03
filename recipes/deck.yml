@@ -1,8 +1,8 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: fedora-bluebird
+name: bluebird-deck
 description: Custom Fedora Silverblue image with pre installed codecs and customs scripts.
-base-image: ghcr.io/blue-build/base-images/fedora-silverblue
-image-version: 44
+base-image: ghcr.io/ublue-os/bazzite-deck-gnome
+image-version: stable-44
 
 modules:
   - type: files
@@ -12,48 +12,26 @@ modules:
         destination: /
 
   - type: dnf
-    repos:
-      copr:
-      - ublue-os/packages
-      files:
-      - https://github.com/terrapkg/subatomic-repos/raw/main/terra.repo
     remove:
       packages:
-      - firefox
-      - firefox-langpacks
-      - gnome-system-monitor
+      - bazaar
+      - btrfs-assistant
       - nano-default-editor
-
-  - type: dnf
-    install:
-      packages:
-      - terra-release-mesa
 
   - type: script
     scripts:
     - priority.sh
-
-  - type: dnf
-    replace:
-    - from-repo: terra-mesa
-      packages:
-      - mesa-dri-drivers
-      - mesa-filesystem
-      - mesa-libEGL
-      - mesa-libGL
-      - mesa-libgbm
-      - mesa-vulkan-drivers
+    - deck-enable.sh
 
   - type: dnf
     install:
       packages:
       - alacritty
-      - btop
       - cargo
       - cmatrix
       - eza
-      - fastfetch
-      - fish
+      - gnome-shell-extension-just-perfection
+      - gnome-software
       - mc
       - qt5ct
       - qt6ct
@@ -125,25 +103,12 @@ modules:
     remove:
       auto-remove: true
       packages:
-      - gnome-shell-extension-apps-menu
-      - gnome-shell-extension-background-logo
       - gnome-shell-extension-common
-      - gnome-shell-extension-launch-new-instance
-      - gnome-shell-extension-places-menu
-      - gnome-shell-extension-window-list
 
   - type: dnf
     install:
       packages:
-      - gnome-rounded-blur
-      - gnome-shell-extension-appindicator
-      - gnome-shell-extension-blur-my-shell
-      - gnome-shell-extension-caffeine
-      - gnome-shell-extension-dash-to-dock
-      - gnome-shell-extension-gsconnect
-      - gnome-shell-extension-just-perfection
       - HandBrake-cli
-      - kf6-kirigami-addons
       - kolourpaint
       - kpat
       - kvantum
@@ -173,26 +138,34 @@ modules:
         - org.gnome.Mahjongg
         - org.gnome.Mines
         - org.gnome.Nibbles
-        - org.gnome.Papers
         - org.gnome.Showtime
-        - org.gnome.SimpleScan
         - org.gnome.Snapshot
         - org.gnome.Sudoku
         - org.gnome.TextEditor
         - org.gnome.Weather
-        - org.kde.elisa
-        - org.libreoffice.LibreOffice
 
   - type: gnome-extensions
     install:
       - Alphabetical App Grid
+      - Dash to Dock
       - Keep pinned apps in AppGrid
-      - Logo Menu
       - Tiling Assistant
+    uninstall:
+      - Burn My Windows
+      - Compiz alike magic lamp effect
+      - Compiz windows effect
+      - Desktop Cube
+      - Hot Edge
 
   - type: files
     files:
       - source: bluebird-post
+        # scary
+        destination: /
+
+  - type: files
+    files:
+      - source: deck
         # scary
         destination: /
 

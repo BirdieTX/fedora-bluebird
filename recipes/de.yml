@@ -54,12 +54,12 @@ modules:
       - cmatrix
       - eza
       - fastfetch
+      - fish
       - kvantum
-      - mangowm
-      - noctalia
       - qt5ct
       - qt6ct
       - rust
+      - satty
       - setroubleshoot
       - signal-cli
       - starship
@@ -255,7 +255,7 @@ modules:
   - type: gnome-extensions
     install:
       - Alphabetical App Grid
-      - Keep Favorites/Pinned Apps in AppGrid
+      - Keep pinned apps in AppGrid
       - Logo Menu
       - Tiling Assistant
 
