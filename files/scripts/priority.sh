@@ -10,7 +10,7 @@ dnf5 config-manager setopt \
     fedora-cisco-openh264.priority=97 \
     terra.priority=89 \
     fedora-multimedia.priority=88 \
-    terra-mesa.priority=87
+    terra-mesa.priority=87 \
     copr:copr.fedorainfracloud.org:ublue-os:packages.name='Universal Blue' \
     fedora.name='Fedora Core' \
     fedora-cisco-openh264.name='Cisco OpenH264' \

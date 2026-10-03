@@ -26,6 +26,8 @@ modules:
       - nano-default-editor
 
   - type: dnf
+    repos:
+      nonfree: negativo17
     install:
       packages:
       - terra-release-mesa
