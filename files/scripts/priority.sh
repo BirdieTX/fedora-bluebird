@@ -4,7 +4,6 @@ set -oue pipefail
 
 dnf5 config-manager setopt \
     copr:copr.fedorainfracloud.org:ublue-os:packages.priority=109 \
-    copr:copr.fedorainfracloud.org:ublue-os:akmods.priority=108 \
     updates-archive.priority=100 \
     fedora.priority=99 \
     updates.priority=98 \
@@ -12,10 +11,7 @@ dnf5 config-manager setopt \
     terra.priority=89 \
     fedora-multimedia.priority=88 \
     terra-mesa.priority=87
-
-dnf5 config-manager setopt \
     copr:copr.fedorainfracloud.org:ublue-os:packages.name='Universal Blue' \
-    copr:copr.fedorainfracloud.org:ublue-os:akmods.name='Nvidia Drivers' \
     fedora.name='Fedora Core' \
     fedora-cisco-openh264.name='Cisco OpenH264' \
     fedora-multimedia.name='Fedora Multilib' \
